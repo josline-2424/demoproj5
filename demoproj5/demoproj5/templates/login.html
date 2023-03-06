@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<br><br>
+<div style="background-image:url('static/assets/bg1.jpg'); opacity:1.0; width:100%; height:679px; background-size: cover; background-repeat: no-repeat;">
+<br><br><br><br><br>
+    <div class="card" style="position: relative; background: rgba(0,0,0,0.85); color:white; right: 40px; left:450px; width: 650px; height: 487px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.8); padding: 0px;">
+        <div class="card-header" style="width:650px; border:5px; color:white; font-family:'Raleway',san-serif; font-stretch: expanded; font-size:28px;"><br><b>L O G I N</b><br></div>
+        <div class="card-body" style="font-size:16px;">
+       <form autocomplete="off" action="login" method="post">
+        {% csrf_token %}
+           <br>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Username:     </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input autocomplete="off" id="rcorners2" type="text" name="username" placeholder="Full name" size="38"><</pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',sans-serif;">Enter Password:     </label>&nbsp&nbsp<input style="color:white;" id="rcorners2" name="pwd" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Min. 8 characters (a-z,A-Z,0-9)" size="38"></pre>
+           <pre><br><input type="submit" name="Submit" id="submit" value="      Login      " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-weight: 700; font-size:18px; font-family:'Raleway',san-serif; border-radius: 14px; background-color:#DC7B0E; color:white; padding:8px;"><br><br></pre>
+           Don't have an account? &nbsp Register with us <a href="register" style="color:#F0AE0D;">here</a><br><br>
+    {% for msg in messages %}
+    <h3 style="color:#F0AE0D; font-family:'Raleway',san-serif; font-size:13px;">{{msg}}<br><br></h3>
+    {% endfor %}
+       </form>
+        </div>
+        </div>
+</div>
+</div>
+{% endblock %}

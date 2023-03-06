@@ -1,0 +1,10 @@
+.navbar navbar-expand-lg navbar-light bg-light
+{
+color:yellow;
+}
+.sticky
+{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Oakwood Mount School</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+    <script>
+        var deptObject = {
+  "Biology": {
+    "BPharm": [],
+    "BSc": [],
+    "BTech": [],
+    "BVSc": [],
+    "MBBS": [],
+  },
+  "Chemistry": {
+    "BPharm": [],
+    "BS": [],
+    "BSc": [],
+    "BTech": [],
+  },
+    "Commerce": {
+    "BA": [],
+    "BBA": [],
+    "BCom": [],
+    "CA": [],
+    "Integrated LLB": [],
+  },
+  "Computer Science": {
+    "BA": [],
+    "BE": [],
+    "BBSc": [],
+    "BTech": [],
+    "Diploma": [],
+  },
+  "Social Science": {
+    "BA": [],
+    "BALLB": [],
+    "BFA": [],
+    "BLibSc": [],
+    "BSc": [],
+  }
+}
+window.onload = function() {
+  var deptSel = document.getElementById("dept");
+  var courseSel = document.getElementById("course");
+
+  for (var x in deptObject) {
+    deptSel.options[deptSel.options.length] = new Option(x, x);
+  }
+  deptSel.onchange = function() {
+  courseSel.length = 1;
+    //display correct values
+    for (var y in deptObject[this.value]) {
+      courseSel.options[courseSel.options.length] = new Option(y, y);
+    }
+  }
+  courseSel.onchange = function() {
+    var z = deptObject[deptSel.value][this.value];
+    for (var i = 0; i < z.length; i++) {}
+  }
+}
+    </script>
+    <script>
+function ShowAndHide() {
+    var x = document.getElementById('SectionName');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function ShowAndHide1() {
+    var y = document.getElementById('SectionName1');
+    if (y.style.display == 'none') {
+        y.style.display = 'block';
+    }
+}
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body
+        { text-align:center; }
+        .img {opacity:0.2}
+        .img-gradient {  content: '';  position: absolute;  left: 0; top: 0;  width: 100%; height: 100%;  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));}
+    #myVideo {
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 10%;
+  min-height: 10%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+.box14{position:relative; width:200px; height:100px;}
+.box15,.box17,.box18{box-shadow:0 0 5px #7e7d7d;text-align:center}
+.box14:before{content:"";width:100%;height:100%;background:rgba(0,0,0,.5);position:absolute;top:0;left:0;opacity:0;transition:all .35s ease 0s}
+.box14:hover:before{opacity:1}
+.box14 img{width:100%;height:auto}
+.box14 .box-content{width:90%;height:90%;position:absolute;top:5%;left:5%}
+.box14 .box-content:after,.box14 .box-content:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;opacity:0;transition:all .7s ease 0s}
+.box14 .box-content:before{border-bottom:1px solid rgba(255,255,255,.5);border-top:1px solid rgba(255,255,255,.5);transform:scale(0,1);transform-origin:0 0 0}
+.box14 .box-content:after{border-left:1px solid rgba(255,255,255,.5);border-right:1px solid rgba(255,255,255,.5);transform:scale(1,0);transform-origin:100% 0 0}
+.box14:hover .box-content:after,.box14:hover .box-content:before{opacity:1;transform:scale(1);transition-delay:.15s}
+.box14 .title{font-size:21px;font-weight:700;color:#fff;margin:15px 0;opacity:0;transform:translate3d(0,-50px,0);transition:transform .5s ease 0s}
+.box14:hover .title{opacity:1;transform:translate3d(0,0,0)}
+.box14 .post{font-size:14px;color:#fff;padding:10px;background:#d79719;opacity:0;border-radius:0 19px;transform:translate3d(0,-50px,0);transition:all .7s ease 0s}
+.box14 .icon,.box15 .icon{padding:0;list-style:none}
+.box14:hover .post{opacity:1;transform:translate3d(0,0,0);transition-delay:.15s}
+.box14 .icon{width:100%;margin:0;position:absolute;bottom:-10px;left:0;opacity:0;z-index:1;transition:all .7s ease 0s}
+.box14:hover .icon{bottom:20px;opacity:1;transition-delay:.15s}
+.box14 .icon li a{display:block;width:40px;height:40px;line-height:40px;border:1px solid #fff;border-radius:0 16px;font-size:14px;color:#fff;margin-right:5px;transition:all .4s ease 0s}
+.box14 .icon li a:hover{background:#d79719;border-color:#d79719}
+@media only screen and (max-width:990px){.box14{margin-bottom:30px}
+}
+#rcorners2 {
+  border-radius: 22px;
+  border: 1px solid #F0AE0D;
+  padding: 8px;
+  margin: 5px 5px 5px 3px;
+  color:white;
+  font-family:'Raleway',san-serif;
+  font-weight:600;
+  background:transparent;
+}
+#rcorners3 {
+  border-radius: 18px;
+  border: 1px solid #F0AE0D;
+  padding: 5px;
+  margin: 2px 2px 2px 0px;
+  color:white;
+  font-family:'Raleway',san-serif;
+  font-weight:100;
+  background:transparent;
+  size:42;
+}
+.overlay {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.overlay h1 {
+    text-shadow: 15px 0px 35px black;
+    color: white;
+    margin: 0rem 10rem 0;
+    mix-blend-mode: overlay;
+    padding: 0px 0px;
+    text-align: center;}
+
+#formbutton { font-family:'Raleway',san-serif; border-radius: 14px; background-color:#DC7B0E; color:white; border:0; padding:15px;}
+#formbutton1 { font-family:'Raleway',san-serif; border-radius: 14px; background-color:#DC7B0E; color:white; border:0; padding:10px;}
+
+.hiddenCB div {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hiddenCB input[type="checkbox"],
+.hiddenCB input[type="radio"] {
+  display: none;
+  }
+.hiddenCB label {
+    cursor: pointer;
+}
+.hiddenCB input[type="checkbox"]+label:hover{
+  background: rgba(255, 255, 255, .1);
+}
+.hiddenCB input[type="checkbox"]:checked+label {
+  background: rgba(0, 0, 0, .5);border: 1px solid #F0AE0D;
+}
+.hiddenCB input[type="checkbox"]:checked+label:hover{
+  background: rgba(0, 255, 255, 0, .7);
+}
+  </style>
+</head>
+<body>
+<!--https://png.pngtree.com/png-clipart/20211017/original/pngtree-school-logo-png-image_6851480.png-->
+<nav class="navbar sticky-top" style="margin: 0;  padding: 0; background-color: black; top: 0;  width: 100%;">
+<nav class="navbar navbar-expand-lg" style="margin: 0;  padding: 0;  background-color: black; color:white; position: fixed;  top: 0;  width: 100%;">
+    <a class="navbar-brand" href="#" style="font-size:30px; color:white;">&nbsp&nbsp<b><span style="color:#F0AE0D">&nbspO A K W O O D</span>&nbsp &nbspM O U N T&nbsp &nbspS C H O O L</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <pre>                                            </pre>
+   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav" style="font-size:15px">
+      <li class="nav-item active">
+        <a class="nav-link" style="color:#F0AE0D;" href="{% url 'demoapp5:index' %}">&nbsp&nbsp<b>HOME</b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="sr-only">(current)</span></a>
+      </li>
+
+      {% if user.is_authenticated %}
+       <li class="nav-item"style="color:white;">
+           <a class="nav-link">Hello User &nbsp</a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link" style="color:#F0AE0D;" href="{% url 'demoapp5:logout' %}">&nbsp&nbsp<b>LOGOUT</b>&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+       </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" style="color:#F0AE0D;" href="{% url 'demoapp5:register' %}"><b>REGISTER</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#F0AE0D;" href="{% url 'demoapp5:login' %}"><b>LOGIN</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+      </li>
+      {% endif %}
+
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" style="background-color:black; color:white; font-weight:10px; border:0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <b>OUR DEPARTMENTS</b>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science">Biology</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Chemistry">Chemistry</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Biology">Commerce</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Social_science">Computer Science</a>
+    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce">Social Science</a>
+  </div>&nbsp&nbsp
+</div>
+    </ul>
+  </div>
+</nav>
+</nav>
+{% block body %}
+{% endblock %}
+{% include 'footer.html' %}
+</body>
+</html>

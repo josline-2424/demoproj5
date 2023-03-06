@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block body %}
+<br><br>
+<div style="background-image:url('static/assets/bg1.jpg'); opacity:1.0; width:100%; height:1050px; background-size: cover; background-repeat: no-repeat;">
+    <br>
+     <button ONCLICK="ShowAndHide()" style="over-hidden" id="formbutton"><b>Fill Store Form</b></button><br><br>
+    <div ID="SectionName" STYLE="display:none">
+
+    <div class="card" style="position: relative; background: rgba(0,0,0,0.85); color:white; right: 40px; left:450px; width: 650px; height: 900px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.8); padding: 0px;">
+        <div class="card-header" style="width:650px; border:5px; color:white; font-family:'Raleway',san-serif; font-stretch: expanded; font-size:20px;"><br><b>F O R M&nbsp R E Q U I R E M E N T S</b></div>
+        <div class="card-body" style="font-size:14px;">
+
+       <form autocomplete="off">
+        {% csrf_token %}
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Name:                       </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input autocomplete="off" id="rcorners3" type="text" name="username" placeholder="Full name" size="38"></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Date of Birth:                                                      </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input style="color:white;" autocomplete="off" id="rcorners3" type="date" name="date" placeholder="" size="38"></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Age:                                                             </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input autocomplete="off" id="rcorners3" type="number" name="number" placeholder="Age" size="38"></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Gender:                                                         </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="gender" value="Male"> &nbsp&nbsp<label for="Male" style="color:#F0AE0D;font-family:'Raleway',san-serif;">Male</label> &nbsp&nbsp<input type="radio" name="gender" value="Female"> <label for="Female" style="color:#F0AE0D;font-family:'Raleway',san-serif;">Female</label></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Contact number:       </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input autocomplete="off" id="rcorners3" type="text" name="contact" placeholder="+49..." size="38"></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Email ID:                     </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input autocomplete="off" id="rcorners3" type="email" name="email" placeholder="example123@gmail.com" size="38"></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Address:                     </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input autocomplete="off" id="rcorners3" type="text" name="address" placeholder="Address" size="38"></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Department:                                                   </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select style="border-radius: 18px; border: 1px solid #F0AE0D; padding: 5px; color:gray; margin: 2px 2px 2px 0px; font-family:'Raleway',san-serif; font-weight:100; background:transparent;" name="dept" id="dept"><option style="color:black;" value="" selected="selected">Select department</option></select><br></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Course:                                        </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select style="border-radius: 18px; border: 1px solid #F0AE0D; padding: 5px; color:gray; margin: 2px 2px 2px 0px; font-family:'Raleway',san-serif; font-weight:100; background:transparent;" name="course" id="course"><option value="" selected="selected">Please select department first</option></select><br></pre>
+
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Purpose:                                                                      </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select style="border-radius: 18px; border: 1px solid #F0AE0D; padding: 5px; color:gray; margin: 2px 2px 2px 0px; font-family:'Raleway',san-serif; font-weight:100; background:transparent;" name="purpose" id="purpose"><option value="1">For Enquiry</option><option value="2">Place order</option><option value="3">For Return</option></select></pre>
+           <pre><label style="color:#F0AE0D; font-family:'Raleway',san-serif;">  Materials:                                                                                                    </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<div class="dropdown"><button class="btn btn-secondary dropdown-toggle" style="border-radius: 18px; border: 1px solid #F0AE0D; padding: 5px; color:gray; margin: 2px 2px 2px 0px; font-family:'Raleway',san-serif; font-weight:100; background:transparent;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Materials</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item"><input style="font-family:'Raleway',san-serif;" type="checkbox">Files</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Fountain Pens</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Bookmarks</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Attendance Register</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Ballpoint Pens</a><a class="dropdown-item"><input style="font-family:'Raleway',san-serif;" type="checkbox">Pencils</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Pencil Case</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Calculator</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Glue</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Scissors</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Instrument Box</a><a class="dropdown-item"><input style=" font-family:'Raleway',san-serif;" type="checkbox">Erasers</a></div>&nbsp&nbsp</div></pre>
+           <br><br><form><button ONCLICK="ShowAndHide1()" style="over-hidden" id="formbutton1" type="button"><b>Submit</b></button><br><br>
+           <div ID="SectionName1" STYLE="display:none">Your form has been submitted successfully.</div></form>
+           <pre><br><br><form action="formreq"><input type="submit" name="Home" id="submit" value="  Back to Home  " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-weight: 700; font-size:14px; font-family:'Raleway',san-serif; border-radius: 14px; background-color:#DC7B0E; color:white; padding:8px;"><br><br></form></pre>
+           {% for msg in messages %}
+    <h3 style="color:#F0AE0D; font-family:'Raleway',san-serif; font-size:13px;">{{msg}}<br><br></h3>
+    {% endfor %}
+       </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
